@@ -82,14 +82,10 @@ ggplot(flats, aes(x=Square)) +
 
 
 #Build scattering schedule that reflects the dependence of the price of the total area
-ggplot(flats, aes(x=Square, y= Price)) +
-  geom_point()
-
+ggplot(flats, aes(x=Square, y= Price)) +  geom_point()
 
 #Construct a histogram for assessing price allocation of flats
-
-p <- ggplot(flats, aes( x= Price)) + geom_bar(fill="lightblue",col="grey") + ylab(' Number ')
-p
+ggplot(flats, aes( x= Price)) + geom_bar(fill="lightblue",col="grey") + ylab(' Number ')
 
 #Construct a box-like diagram for price visualization allocation based on the number of rooms
 ggplot(flats) + geom_boxplot(aes(factor(Room), y=Price)) + coord_flip()
